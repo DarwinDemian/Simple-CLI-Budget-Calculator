@@ -106,7 +106,7 @@ const addCustomCurrency = () => {
     interface.question(
       "How much does 1 BRL cost in that currency? (x.xx): ",
       (answer) => {
-        let currencyRate = parseInt(answer);
+        currencyRate = parseInt(answer);
 
         exchangeRate[currencyName] = currencyRate;
         console.log();
