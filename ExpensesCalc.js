@@ -39,7 +39,7 @@ const closeInterface = () => {
 // Class to caculate savings
 // Static methods are necessary because:
 // It needs to be able to call itself
-// It need to be able to reference its own vars
+// It needs to be able to reference its own vars
 class Calculate {
   static calculateSavings() {
     // Loop through each month
@@ -76,7 +76,7 @@ class Calculate {
   }
 
   static get convertToGBP() {
-    return (this.gbp = totalSavings * currencyRate);
+    return (totalSavings * currencyRate);
   }
 
   // Isolated method to show results in the console
@@ -142,6 +142,7 @@ const useAvailableCurrency = () => {
 };
 
 const askCurrency = () => {
+  console.log();
   interface.question(
     "Use available currencies or add a new one? (available/custom): ",
     (answer) => {
@@ -151,7 +152,7 @@ const askCurrency = () => {
   );
 };
 
-const chooseCurrency = async () => {
+const chooseCurrency = () => {
   console.log("Currencies available to convert:");
   console.log();
 
